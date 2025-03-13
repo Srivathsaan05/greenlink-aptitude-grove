@@ -1,4 +1,3 @@
-
 export interface Question {
   id: string;
   topicId: string;
@@ -78,7 +77,7 @@ export const questions: Question[] = [
       'BQFEHS'
     ],
     correctAnswer: 1,
-    explanation: 'In this code, each letter is replaced by the previous letter in the alphabet, and then it's reversed. So CREDIT becomes BSFEHSF.',
+    explanation: 'In this code, each letter is replaced by the previous letter in the alphabet, and then it\'s reversed. So CREDIT becomes BSFEHSF.',
     difficulty: 'Hard'
   },
   {
@@ -447,56 +446,197 @@ export const questions: Question[] = [
     explanation: 'Speed = 816 km / 12 h = 68 km/h = 68 × 5/18 m/s = 18.89 m/s ≈ 19 m/s.',
     difficulty: 'Medium'
   },
-  // ... continue with more questions for 'quantitative-aptitude'
-  
-  // ... Additional questions for other topics ensuring at least 25 per topic
-
-  // ... Continue with questions for all other topics, ensuring at least 25 questions per topic
-  
-  // HCF and LCM - Make sure there are at least 25 questions
   {
-    id: 'hcf-1',
-    topicId: 'hcf-lcm',
-    text: 'What is the HCF of 48 and 60?',
+    id: 'qa-7',
+    topicId: 'quantitative-aptitude',
+    text: 'What is the area of a circle with a radius of 7 cm?',
     options: [
-      '6',
-      '12',
-      '24',
-      '36'
+      '154 cm²',
+      '144 cm²',
+      '134 cm²',
+      '124 cm²'
     ],
-    correctAnswer: 1,
-    explanation: 'Prime factorization of 48 = 2^4 × 3. Prime factorization of 60 = 2^2 × 3 × 5. The common factors are 2^2 × 3 = 12.',
+    correctAnswer: 0,
+    explanation: 'Area of a circle = πr² = π(7²) = 49π ≈ 49 × 22/7 = 154 cm²',
     difficulty: 'Easy'
   },
   {
-    id: 'hcf-2',
-    topicId: 'hcf-lcm',
-    text: 'The LCM of two numbers is 120 and their HCF is 10. If one of the numbers is 40, what is the other number?',
+    id: 'qa-8',
+    topicId: 'quantitative-aptitude',
+    text: 'A shopkeeper sells an item for Rs. 2400 and makes a profit of 20%. What is the cost price of the item?',
     options: [
-      '30',
-      '60',
-      '80',
-      '120'
+      'Rs. 1800',
+      'Rs. 2000',
+      'Rs. 2200',
+      'Rs. 2300'
     ],
-    correctAnswer: 0,
-    explanation: 'For two numbers a and b, a × b = HCF × LCM. So, 40 × other number = 10 × 120 = 1200. Therefore, other number = 1200 ÷ 40 = 30.',
+    correctAnswer: 1,
+    explanation: 'Selling Price = Cost Price + Profit. Profit = 20% of Cost Price. So, 2400 = Cost Price + 0.2 × Cost Price = 1.2 × Cost Price. Therefore, Cost Price = 2400 / 1.2 = Rs. 2000.',
     difficulty: 'Medium'
   },
-  // ... continue with more questions for 'hcf-lcm'
-  
-  // Add at least 25 questions for each of the remaining topics
-  // ... Averages
-  // ... Percentages
-  // ... Profit and Loss
-  // ... Ratios and Proportions
-  // ... Syllabus Overview
-  // ... Verbal Ability
-];
-
-export const getQuestionsByTopic = (topicId: string): Question[] => {
-  return questions.filter(question => question.topicId === topicId);
-};
-
-export const getQuestionById = (id: string): Question | undefined => {
-  return questions.find(question => question.id === id);
-};
+  {
+    id: 'qa-9',
+    topicId: 'quantitative-aptitude',
+    text: 'If the ratio of boys to girls in a class is 5:3 and there are 24 girls, how many boys are there?',
+    options: [
+      '30',
+      '35',
+      '40',
+      '45'
+    ],
+    correctAnswer: 2,
+    explanation: 'Let the number of boys be 5x and the number of girls be 3x. Given 3x = 24, so x = 8. Therefore, the number of boys = 5x = 5 × 8 = 40.',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'qa-10',
+    topicId: 'quantitative-aptitude',
+    text: 'A man can row 7.5 km/h in still water and he finds that it takes him twice as long to row upstream as to row downstream the same distance. Find the rate of the stream.',
+    options: [
+      '2 km/h',
+      '2.5 km/h',
+      '3 km/h',
+      '3.5 km/h'
+    ],
+    correctAnswer: 1,
+    explanation: 'Let the speed of the stream be x km/h. Speed downstream = (7.5 + x) km/h and speed upstream = (7.5 - x) km/h. Given that time taken to row upstream is twice the time taken to row downstream, we have (7.5 + x) = 2(7.5 - x). Solving for x, we get x = 2.5 km/h.',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'qa-11',
+    topicId: 'quantitative-aptitude',
+    text: 'What is the value of (0.2)² + (0.03)² + (0.004)²?',
+    options: [
+      '0.040916',
+      '0.040906',
+      '0.040016',
+      '0.040006'
+    ],
+    correctAnswer: 0,
+    explanation: '(0.2)² = 0.04, (0.03)² = 0.0009, (0.004)² = 0.000016. Adding these, we get 0.04 + 0.0009 + 0.000016 = 0.040916.',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'qa-12',
+    topicId: 'quantitative-aptitude',
+    text: 'A sum of money is to be divided among A, B and C in the ratio 2:3:5. If A gets Rs. 1600, how much will C get?',
+    options: [
+      'Rs. 2400',
+      'Rs. 4000',
+      'Rs. 4800',
+      'Rs. 8000'
+    ],
+    correctAnswer: 2,
+    explanation: 'Let the shares of A, B, and C be 2x, 3x, and 5x respectively. Given 2x = 1600, so x = 800. Therefore, C\'s share = 5x = 5 × 800 = Rs. 4000.',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'qa-13',
+    topicId: 'quantitative-aptitude',
+    text: 'By selling a watch for Rs. 495, a shopkeeper incurs a loss of 10%. What is the cost price of the watch?',
+    options: [
+      'Rs. 545',
+      'Rs. 550',
+      'Rs. 600',
+      'Rs. 650'
+    ],
+    correctAnswer: 1,
+    explanation: 'Selling Price = Cost Price - Loss. Loss = 10% of Cost Price. So, 495 = Cost Price - 0.1 × Cost Price = 0.9 × Cost Price. Therefore, Cost Price = 495 / 0.9 = Rs. 550.',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'qa-14',
+    topicId: 'quantitative-aptitude',
+    text: 'A and B can do a piece of work in 12 days. B and C can do it in 15 days. C and A can do it in 20 days. How long will A alone take to do the work?',
+    options: [
+      '20 days',
+      '30 days',
+      '40 days',
+      '50 days'
+    ],
+    correctAnswer: 1,
+    explanation: 'Let A, B, and C\'s one day\'s work be a, b, and c respectively. Then, a + b = 1/12, b + c = 1/15, c + a = 1/20. Adding these, we get 2(a + b + c) = 1/12 + 1/15 + 1/20 = (5 + 4 + 3)/60 = 12/60 = 1/5. So, a + b + c = 1/10. Therefore, a = (a + b + c) - (b + c) = 1/10 - 1/15 = (3 - 2)/30 = 1/30. Thus, A alone can do the work in 30 days.',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'qa-15',
+    topicId: 'quantitative-aptitude',
+    text: 'A train 125 m long passes a man, running at 5 km/hr in the same direction in which the train is going, in 10 seconds. The speed of the train is:',
+    options: [
+      '45 km/hr',
+      '50 km/hr',
+      '54 km/hr',
+      '55 km/hr'
+    ],
+    correctAnswer: 1,
+    explanation: 'Let the speed of the train be x km/hr. Relative speed = (x - 5) km/hr = (x - 5) × 5/18 m/s. Distance = 125 m. Time = 10 seconds. So, (x - 5) × 5/18 = 125/10 = 12.5. Therefore, x - 5 = 12.5 × 18/5 = 45. Thus, x = 50 km/hr.',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'qa-16',
+    topicId: 'quantitative-aptitude',
+    text: 'If A = x% of y and B = y% of x, then which of the following is true?',
+    options: [
+      'A is smaller than B',
+      'A is greater than B',
+      'Relationship between A and B cannot be determined',
+      'None of these'
+    ],
+    correctAnswer: 3,
+    explanation: 'A = (x/100) × y = xy/100. B = (y/100) × x = xy/100. Therefore, A = B.',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'qa-17',
+    topicId: 'quantitative-aptitude',
+    text: 'Two trains are moving in opposite directions at 60 km/hr and 90 km/hr respectively. Their lengths are 1.10 km and 0.9 km respectively. The time taken by the slower train to cross the faster train in seconds is:',
+    options: [
+      '36',
+      '45',
+      '48',
+      '49'
+    ],
+    correctAnswer: 2,
+    explanation: 'Relative speed = (60 + 90) km/hr = 150 km/hr = 150 × 5/18 m/s = 125/3 m/s. Total distance = (1.10 + 0.9) km = 2 km = 2000 m. Time = Distance / Speed = 2000 / (125/3) = 2000 × 3 / 125 = 48 seconds.',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'qa-18',
+    topicId: 'quantitative-aptitude',
+    text: 'A can do a piece of work in 4 days; B can do it in 5 days; and C can do it in 10 days. How long will they take to do it together?',
+    options: [
+      '20/11 days',
+      '40/11 days',
+      '60/11 days',
+      '80/11 days'
+    ],
+    correctAnswer: 0,
+    explanation: 'A\'s one day\'s work = 1/4, B\'s one day\'s work = 1/5, C\'s one day\'s work = 1/10. (A + B + C)\'s one day\'s work = 1/4 + 1/5 + 1/10 = (5 + 4 + 2)/20 = 11/20. Therefore, they will take 20/11 days to do the work together.',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'qa-19',
+    topicId: 'quantitative-aptitude',
+    text: 'If log₂ x + log₂ 4 = 4, then x is:',
+    options: [
+      '2',
+      '4',
+      '6',
+      '8'
+    ],
+    correctAnswer: 3,
+    explanation: 'log₂ x + log₂ 4 = log₂ (4x) = 4. So, 4x = 2⁴ = 16. Therefore, x = 16/4 = 4.',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'qa-20',
+    topicId: 'quantitative-aptitude',
+    text: 'The cost of fencing a circular field at the rate of Rs. 24 per meter is Rs. 5280. The area of the field is:',
+    options: [
+      '1750 m²',
+      '1950 m²',
+      '5544 m²',
+      'None of these'
+    ],
+    correctAnswer: 2,
+    explanation: 'Cost of fencing = Rs. 5280. Rate of fencing = Rs. 24 per meter. So, the circumference of the field = 5280/24 = 220 m. Let the radius of the field be r. Then, 2πr = 220. So, r = 220 / (2π) = 220 / (2 × 22

@@ -639,4 +639,4 @@ export const questions: Question[] = [
       'None of these'
     ],
     correctAnswer: 2,
-    explanation: 'Cost of fencing = Rs. 5280. Rate of fencing = Rs. 24 per meter. So, the circumference of the field = 5280/24 = 220 m. Let the radius of the field be r. Then, 2πr = 220. So, r = 220 / (2π) = 220 / (2 × 22
+    explanation: 'Cost of fencing = Rs. 5280. Rate of fencing = Rs. 24 per meter. So, the circumference of the field = 5280/24 = 220 m. Let the radius of the field be r. Then, 2πr = 220. So, r = 220 / (2π) = 220 / (2 ×

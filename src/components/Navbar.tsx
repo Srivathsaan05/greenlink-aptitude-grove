@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, BookOpen, BarChart2 } from 'lucide-react';
+import { Menu, X, BookOpen, BarChart2, LogIn } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { useProgress } from '@/contexts/ProgressContext';
@@ -28,8 +28,8 @@ export function Navbar() {
           to="/" 
           className="flex items-center space-x-2 transition-transform duration-300 hover:scale-105"
         >
-          <BookOpen className="h-5 w-5 text-green-600" strokeWidth={2.5} />
-          <span className="text-xl font-semibold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
+          <BookOpen className="h-7 w-7 text-green-600" strokeWidth={3} />
+          <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent drop-shadow-sm">
             GreenLink
           </span>
         </Link>
@@ -60,6 +60,15 @@ export function Navbar() {
               {item.label}
             </Link>
           ))}
+          
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="ml-2 border-green-200 hover:bg-green-50 dark:border-green-800 dark:hover:bg-green-900/20"
+          >
+            <LogIn className="h-4 w-4 mr-1" />
+            Sign In
+          </Button>
         </div>
 
         {/* Mobile menu button */}
@@ -97,6 +106,16 @@ export function Navbar() {
               {item.label}
             </Link>
           ))}
+          
+          {/* Mobile sign in button */}
+          <Button 
+            variant="outline" 
+            className="w-full mt-2 border-green-200 hover:bg-green-50 dark:border-green-800 dark:hover:bg-green-900/20"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <LogIn className="h-4 w-4 mr-1" />
+            Sign In
+          </Button>
           
           {/* Mobile progress indicator */}
           <div className="mt-4 bg-white dark:bg-gray-800 rounded-lg px-3 py-2 flex items-center space-x-2 shadow-sm">

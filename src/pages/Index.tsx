@@ -1,8 +1,8 @@
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navbar } from '@/components/Navbar';
 import { TopicCard } from '@/components/TopicCard';
+import { DeveloperInfo } from '@/components/DeveloperInfo';
 import { topics, Topic, getAllCategories } from '@/data/topics';
 import { 
   ChevronRight, 
@@ -252,6 +252,9 @@ const Index = () => {
           </Button>
         </div>
       </section>
+      
+      {/* Developer Info Section */}
+      <DeveloperInfo />
       
       {/* Footer */}
       <footer className="py-8 px-4 border-t">
